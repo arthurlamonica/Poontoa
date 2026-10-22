@@ -5,13 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>POONTOA — Agência de Publicidade & Performance Criativa</title>
     <meta name="description" content="Poontoa — Agência de publicidade e performance criativa que transforma marcas em referências de mercado. Design, Mídia e Resultados." />
-    <!-- Google Fonts: Preset B "Midnight Luxe" (Inter, Playfair Display Italic, JetBrains Mono) -->
+    <!-- Google Fonts: Montserrat (Pesos 300 a 900, Normal e Itálico) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script>
+      // Se aberto diretamente pelo arquivo (file://), redireciona automaticamente para o servidor local Vite
+      if (window.location.protocol === 'file:') {
+        window.location.href = 'http://localhost:5173/';
+      }
+    </script>
+    <!-- Favicon com a nova logo da marca -->
+    <link rel="icon" type="image/png" href="/logo-green.png" />
   </head>
-  <body class="bg-[#FAF8F5] text-[#2A2A35] antialiased selection:bg-[#C9A84C] selection:text-[#0D0D12] overflow-x-hidden">
-    <div id="root"></div>
+  <body class="bg-[#FAF8F5] text-[#1E1E1E] antialiased selection:bg-[#02b6a4] selection:text-[#1E1E1E] overflow-x-hidden font-sans">
+    <div id="root">
+      <!-- Fallback imediato caso aberto via duplo clique antes do Vite carregar -->
+      <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#1E1E1E;color:#FAF8F5;font-family:'Montserrat',sans-serif;padding:24px;text-align:center;">
+        <div style="max-width:540px;background:#242424;border:1px solid rgba(2,182,164,0.35);border-radius:28px;padding:40px;box-shadow:0 30px 80px rgba(0,0,0,0.6);">
+          <img src="/logo-green.png" alt="Poontoa" style="height:52px;margin:0 auto 20px auto;display:block;" />
+          <p style="font-size:13px;color:#02b6a4;font-family:'Montserrat',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;margin-bottom:20px;">DESIGN • MÍDIA • RESULTADOS</p>
+          <p style="font-size:14px;color:#A5A5B5;line-height:1.6;margin-bottom:28px;">
+            Este site foi construído com <strong>React & Vite</strong>. Para visualizá-lo com todas as animações e funcionalidades:
+          </p>
+          <a href="http://localhost:5173/" style="display:inline-flex;align-items:center;gap:8px;background:#02b6a4;color:#1E1E1E;font-weight:700;font-size:14px;padding:15px 32px;border-radius:999px;text-decoration:none;box-shadow:0 10px 30px rgba(2,182,164,0.35);">
+            <span>Acessar Site no Navegador (localhost:5173)</span> →
+          </a>
+          <div style="margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);font-size:12px;color:#787888;line-height:1.5;">
+            Dica: Dê 2 cliques no arquivo <strong style="color:#FAF8F5;">iniciar-site.bat</strong> na pasta do projeto para ligar o servidor e abrir o navegador automaticamente.
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

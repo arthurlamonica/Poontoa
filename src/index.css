@@ -5,13 +5,18 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #FAF8F5;
-    color: #2A2A35;
+    color: #1E1E1E;
   }
 
   body {
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+  }
+
+  button, input, textarea, select {
+    font-family: 'Montserrat', sans-serif;
   }
 }
 
@@ -88,21 +93,39 @@
   animation: ekgPulse 4.5s linear infinite;
 }
 
+/* Hero Kinetic Motion & Glow */
+@keyframes neonPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 25px rgba(2, 182, 164, 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 55px rgba(2, 182, 164, 0.75));
+  }
+}
+
+.animate-neon-pulse {
+  animation: neonPulse 3.5s ease-in-out infinite;
+}
+
+.hero-perspective-wrapper {
+  perspective: 1200px;
+}
+
 /* Custom Subtle Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0D0D12;
+  background: #1E1E1E;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A2A35;
+  background: #2E2E2E;
   border-radius: 9999px;
-  border: 2px solid #0D0D12;
+  border: 2px solid #1E1E1E;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C9A84C;
+  background: #02b6a4;
 }

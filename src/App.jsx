@@ -41,23 +41,23 @@ function MagneticButton({
 
   const variants = {
     accent:
-      'bg-[#C9A84C] text-[#0D0D12] shadow-[0_10px_30px_rgba(201,168,76,0.28)] hover:shadow-[0_16px_40px_rgba(201,168,76,0.42)]',
+      'bg-[#02b6a4] text-[#1E1E1E] shadow-[0_10px_30px_rgba(2, 182, 164,0.28)] hover:shadow-[0_16px_40px_rgba(2, 182, 164,0.42)]',
     dark:
-      'bg-[#0D0D12] text-[#FAF8F5] border border-[#FAF8F5]/15 hover:border-[#C9A84C]/60',
+      'bg-[#1E1E1E] text-[#FAF8F5] border border-[#FAF8F5]/15 hover:border-[#02b6a4]/60',
     outline:
-      'bg-transparent text-[#FAF8F5] border border-[#FAF8F5]/25 hover:border-[#C9A84C]'
+      'bg-transparent text-[#FAF8F5] border border-[#FAF8F5]/25 hover:border-[#02b6a4]'
   };
 
   const slideStyles = {
     accent: 'bg-[#FAF8F5]',
-    dark: 'bg-[#C9A84C]',
-    outline: 'bg-[#C9A84C]'
+    dark: 'bg-[#02b6a4]',
+    outline: 'bg-[#02b6a4]'
   };
 
   const textHoverStyles = {
-    accent: 'group-hover:text-[#0D0D12]',
-    dark: 'group-hover:text-[#0D0D12]',
-    outline: 'group-hover:text-[#0D0D12]'
+    accent: 'group-hover:text-[#1E1E1E]',
+    dark: 'group-hover:text-[#1E1E1E]',
+    outline: 'group-hover:text-[#1E1E1E]'
   };
 
   const content = (
@@ -139,16 +139,16 @@ function DiagnosticShufflerCard() {
   };
 
   return (
-    <div className="group relative flex flex-col justify-between bg-[#FAF8F5] border border-[#0D0D12]/10 rounded-[2rem] p-7 md:p-8 shadow-[0_24px_60px_rgba(13,13,18,0.06)] hover:shadow-[0_30px_80px_rgba(13,13,18,0.11)] transition-all duration-500">
+    <div className="group relative flex flex-col justify-between bg-[#FAF8F5] border border-[#1E1E1E]/10 rounded-[2rem] p-7 md:p-8 shadow-[0_24px_60px_rgba(13,13,18,0.06)] hover:shadow-[0_30px_80px_rgba(13,13,18,0.11)] transition-all duration-500">
       {/* Top Status Bar */}
       <div>
         <div className="flex items-center justify-between mb-6">
-          <span className="font-mono text-[11px] uppercase tracking-widest text-[#2A2A35]/60 bg-[#0D0D12]/5 px-3 py-1 rounded-full">
+          <span className="font-mono text-[11px] uppercase tracking-widest text-[#1E1E1E]/60 bg-[#1E1E1E]/5 px-3 py-1 rounded-full">
             01 / BRANDING ENGINE
           </span>
           <button
             onClick={handleManualCycle}
-            className="font-mono text-[11px] text-[#C9A84C] bg-[#0D0D12] px-3 py-1 rounded-full hover:scale-105 transition-transform cursor-pointer"
+            className="font-mono text-[11px] text-[#02b6a4] bg-[#1E1E1E] px-3 py-1 rounded-full hover:scale-105 transition-transform cursor-pointer"
             title="Alternar diagnóstico"
           >
             SHUFFLE ↻
@@ -158,9 +158,9 @@ function DiagnosticShufflerCard() {
         {/* Interactive Shuffler Micro-UI */}
         <div
           onClick={handleManualCycle}
-          className="relative h-56 w-full bg-[#0D0D12] rounded-[1.5rem] p-5 overflow-hidden cursor-pointer select-none border border-[#0D0D12]/10"
+          className="relative h-56 w-full bg-[#1E1E1E] rounded-[1.5rem] p-5 overflow-hidden cursor-pointer select-none border border-[#1E1E1E]/10"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,168,76,0.16),transparent_65%)] pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(2, 182, 164,0.16),transparent_65%)] pointer-events-none" />
           <div className="relative h-full w-full flex flex-col items-center justify-center">
             {items.map((item, index) => {
               const isFront = index === 0;
@@ -180,18 +180,18 @@ function DiagnosticShufflerCard() {
                   }}
                   className={`shuffler-card absolute inset-x-2 top-3 rounded-[1.25rem] p-4 border ${
                     isFront
-                      ? 'bg-[#16161F] border-[#C9A84C]/50 shadow-[0_14px_35px_rgba(0,0,0,0.65)]'
+                      ? 'bg-[#252525] border-[#02b6a4]/50 shadow-[0_14px_35px_rgba(0,0,0,0.65)]'
                       : isMid
                       ? 'bg-[#12121A] border-white/10'
                       : 'bg-[#0E0E14] border-white/5'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-[10px] tracking-wider text-[#C9A84C]">
+                    <span className="font-mono text-[10px] tracking-wider text-[#02b6a4]">
                       {item.code}
                     </span>
                     <span className="inline-flex items-center gap-1.5 font-mono text-[10px] text-[#FAF8F5]/80 bg-white/5 px-2.5 py-0.5 rounded-full">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#C9A84C]" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#02b6a4]" />
                       {item.status}
                     </span>
                   </div>
@@ -205,7 +205,7 @@ function DiagnosticShufflerCard() {
                     <span className="font-mono text-[10px] text-[#FAF8F5]/50">
                       ÍNDICE DE AUTORIDADE
                     </span>
-                    <span className="font-mono text-xs font-semibold text-[#C9A84C]">
+                    <span className="font-mono text-xs font-semibold text-[#02b6a4]">
                       {item.metric}
                     </span>
                   </div>
@@ -218,10 +218,10 @@ function DiagnosticShufflerCard() {
 
       {/* Card Description */}
       <div className="mt-7">
-        <h3 className="font-sans font-bold text-xl text-[#0D0D12] tracking-tight mb-2">
+        <h3 className="font-sans font-bold text-xl text-[#1E1E1E] tracking-tight mb-2">
           Posicionamento e Identidade de Marca
         </h3>
-        <p className="font-sans text-sm text-[#2A2A35]/80 leading-relaxed">
+        <p className="font-sans text-sm text-[#1E1E1E]/80 leading-relaxed">
           Construímos sistemas visuais e narrativas de alto valor que separam sua empresa da concorrência comum e criam desejo imediato.
         </p>
       </div>
@@ -276,28 +276,28 @@ function TelemetryTypewriterCard() {
   }, [displayedText, isDeleting, msgIndex]);
 
   return (
-    <div className="group relative flex flex-col justify-between bg-[#FAF8F5] border border-[#0D0D12]/10 rounded-[2rem] p-7 md:p-8 shadow-[0_24px_60px_rgba(13,13,18,0.06)] hover:shadow-[0_30px_80px_rgba(13,13,18,0.11)] transition-all duration-500">
+    <div className="group relative flex flex-col justify-between bg-[#FAF8F5] border border-[#1E1E1E]/10 rounded-[2rem] p-7 md:p-8 shadow-[0_24px_60px_rgba(13,13,18,0.06)] hover:shadow-[0_30px_80px_rgba(13,13,18,0.11)] transition-all duration-500">
       <div>
         <div className="flex items-center justify-between mb-6">
-          <span className="font-mono text-[11px] uppercase tracking-widest text-[#2A2A35]/60 bg-[#0D0D12]/5 px-3 py-1 rounded-full">
+          <span className="font-mono text-[11px] uppercase tracking-widest text-[#1E1E1E]/60 bg-[#1E1E1E]/5 px-3 py-1 rounded-full">
             02 / DATA TELEMETRY
           </span>
-          <div className="inline-flex items-center gap-2 bg-[#0D0D12] text-[#FAF8F5] px-3 py-1 rounded-full">
+          <div className="inline-flex items-center gap-2 bg-[#1E1E1E] text-[#FAF8F5] px-3 py-1 rounded-full">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C9A84C] opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C9A84C]" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#02b6a4] opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#02b6a4]" />
             </span>
-            <span className="font-mono text-[10px] uppercase tracking-widest text-[#C9A84C]">
+            <span className="font-mono text-[10px] uppercase tracking-widest text-[#02b6a4]">
               Live Feed
             </span>
           </div>
         </div>
 
         {/* Telemetry Terminal Micro-UI */}
-        <div className="relative h-56 w-full bg-[#0D0D12] rounded-[1.5rem] p-5 flex flex-col justify-between overflow-hidden border border-[#0D0D12]/10">
+        <div className="relative h-56 w-full bg-[#1E1E1E] rounded-[1.5rem] p-5 flex flex-col justify-between overflow-hidden border border-[#1E1E1E]/10">
           <div className="flex items-center justify-between border-b border-white/10 pb-2.5">
             <div className="flex items-center gap-1.5">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#C9A84C]/80" />
+              <span className="h-2.5 w-2.5 rounded-full bg-[#02b6a4]/80" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
             </div>
@@ -318,7 +318,7 @@ function TelemetryTypewriterCard() {
             ))}
             <div className="text-[#FAF8F5] font-medium leading-relaxed min-h-[2.75rem]">
               <span>{displayedText}</span>
-              <span className="inline-block w-2 h-4 ml-1 align-middle bg-[#C9A84C] animate-pulse" />
+              <span className="inline-block w-2 h-4 ml-1 align-middle bg-[#02b6a4] animate-pulse" />
             </div>
           </div>
 
@@ -326,7 +326,7 @@ function TelemetryTypewriterCard() {
           <div className="grid grid-cols-3 gap-2 pt-2.5 border-t border-white/10 font-mono">
             <div className="bg-white/5 rounded-xl px-2.5 py-1.5">
               <span className="block text-[9px] text-[#FAF8F5]/45">ROAS MÉDIO</span>
-              <span className="text-xs font-semibold text-[#C9A84C]">6.4x</span>
+              <span className="text-xs font-semibold text-[#02b6a4]">6.4x</span>
             </div>
             <div className="bg-white/5 rounded-xl px-2.5 py-1.5">
               <span className="block text-[9px] text-[#FAF8F5]/45">CTR CRIATIVO</span>
@@ -342,10 +342,10 @@ function TelemetryTypewriterCard() {
 
       {/* Card Description */}
       <div className="mt-7">
-        <h3 className="font-sans font-bold text-xl text-[#0D0D12] tracking-tight mb-2">
+        <h3 className="font-sans font-bold text-xl text-[#1E1E1E] tracking-tight mb-2">
           Inteligência de Dados e Conversão
         </h3>
-        <p className="font-sans text-sm text-[#2A2A35]/80 leading-relaxed">
+        <p className="font-sans text-sm text-[#1E1E1E]/80 leading-relaxed">
           Gestão cirúrgica de Meta Ads, Google Ads e funis de conversão onde cada centavo investido é rastreado para multiplicar seu retorno.
         </p>
       </div>
@@ -462,24 +462,24 @@ function CursorProtocolSchedulerCard() {
   }, []);
 
   return (
-    <div className="group relative flex flex-col justify-between bg-[#FAF8F5] border border-[#0D0D12]/10 rounded-[2rem] p-7 md:p-8 shadow-[0_24px_60px_rgba(13,13,18,0.06)] hover:shadow-[0_30px_80px_rgba(13,13,18,0.11)] transition-all duration-500">
+    <div className="group relative flex flex-col justify-between bg-[#FAF8F5] border border-[#1E1E1E]/10 rounded-[2rem] p-7 md:p-8 shadow-[0_24px_60px_rgba(13,13,18,0.06)] hover:shadow-[0_30px_80px_rgba(13,13,18,0.11)] transition-all duration-500">
       <div>
         <div className="flex items-center justify-between mb-6">
-          <span className="font-mono text-[11px] uppercase tracking-widest text-[#2A2A35]/60 bg-[#0D0D12]/5 px-3 py-1 rounded-full">
+          <span className="font-mono text-[11px] uppercase tracking-widest text-[#1E1E1E]/60 bg-[#1E1E1E]/5 px-3 py-1 rounded-full">
             03 / SPRINT PROTOCOL
           </span>
-          <span className="font-mono text-[11px] text-[#0D0D12] bg-[#C9A84C]/25 px-3 py-1 rounded-full font-medium">
+          <span className="font-mono text-[11px] text-[#1E1E1E] bg-[#02b6a4]/25 px-3 py-1 rounded-full font-medium">
             REELS & MOTION
           </span>
         </div>
 
         {/* Weekly Scheduler Micro-UI */}
-        <div className="relative h-56 w-full bg-[#0D0D12] rounded-[1.5rem] p-5 flex flex-col justify-between overflow-hidden border border-[#0D0D12]/10 select-none">
+        <div className="relative h-56 w-full bg-[#1E1E1E] rounded-[1.5rem] p-5 flex flex-col justify-between overflow-hidden border border-[#1E1E1E]/10 select-none">
           <div className="flex items-center justify-between">
             <span className="font-mono text-[10px] uppercase tracking-widest text-[#FAF8F5]/60">
               CRONOGRAMA DE SPRINT AUDIOVISUAL
             </span>
-            <span className="font-mono text-[10px] text-[#C9A84C]">
+            <span className="font-mono text-[10px] text-[#02b6a4]">
               {savedNotice ? '✓ SPRINT PUBLICADO' : 'CADÊNCIA SEMANAL'}
             </span>
           </div>
@@ -502,14 +502,14 @@ function CursorProtocolSchedulerCard() {
                   }}
                   className={`flex flex-col items-center justify-center rounded-xl py-2.5 px-1 border transition-all duration-300 cursor-pointer ${
                     isActive
-                      ? 'bg-[#C9A84C] text-[#0D0D12] border-[#C9A84C] shadow-[0_0_20px_rgba(201,168,76,0.4)]'
+                      ? 'bg-[#02b6a4] text-[#1E1E1E] border-[#02b6a4] shadow-[0_0_20px_rgba(2, 182, 164,0.4)]'
                       : 'bg-white/5 text-[#FAF8F5]/70 border-white/10 hover:border-white/25'
                   }`}
                 >
                   <span className="font-mono text-xs font-bold">{d.label}</span>
                   <span
                     className={`font-mono text-[8px] mt-1 truncate max-w-full ${
-                      isActive ? 'text-[#0D0D12] font-semibold' : 'text-[#FAF8F5]/40'
+                      isActive ? 'text-[#1E1E1E] font-semibold' : 'text-[#FAF8F5]/40'
                     }`}
                   >
                     {d.task}
@@ -522,7 +522,7 @@ function CursorProtocolSchedulerCard() {
           {/* Bottom Action Row with Save Button */}
           <div className="flex items-center justify-between pt-2 border-t border-white/10">
             <div className="font-mono text-[10px] text-[#FAF8F5]/50">
-              <span className="text-[#C9A84C] font-semibold">{activeDays.length} entregas</span> ativas na semana
+              <span className="text-[#02b6a4] font-semibold">{activeDays.length} entregas</span> ativas na semana
             </div>
             <div
               style={{
@@ -530,7 +530,7 @@ function CursorProtocolSchedulerCard() {
               }}
               className={`font-mono text-[10px] uppercase tracking-wider px-3.5 py-1.5 rounded-full transition-all duration-200 ${
                 pressingSave || savedNotice
-                  ? 'bg-[#C9A84C] text-[#0D0D12] font-semibold shadow-[0_0_16px_rgba(201,168,76,0.6)]'
+                  ? 'bg-[#02b6a4] text-[#1E1E1E] font-semibold shadow-[0_0_16px_rgba(2, 182, 164,0.6)]'
                   : 'bg-white/10 text-[#FAF8F5] border border-white/15'
               }`}
             >
@@ -556,8 +556,8 @@ function CursorProtocolSchedulerCard() {
             >
               <path
                 d="M4 3L11.5 20L14.2 13.8L20.5 11.2L4 3Z"
-                fill="#C9A84C"
-                stroke="#0D0D12"
+                fill="#02b6a4"
+                stroke="#1E1E1E"
                 strokeWidth="1.5"
                 strokeLinejoin="round"
               />
@@ -568,10 +568,10 @@ function CursorProtocolSchedulerCard() {
 
       {/* Card Description */}
       <div className="mt-7">
-        <h3 className="font-sans font-bold text-xl text-[#0D0D12] tracking-tight mb-2">
+        <h3 className="font-sans font-bold text-xl text-[#1E1E1E] tracking-tight mb-2">
           Produção Audiovisual e Sprints Criativos
         </h3>
-        <p className="font-sans text-sm text-[#2A2A35]/80 leading-relaxed">
+        <p className="font-sans text-sm text-[#1E1E1E]/80 leading-relaxed">
           Reels cinematográficos, vídeos institucionais, motion graphics e baterias de criativos entregues em cadência previsível de alta velocidade.
         </p>
       </div>
@@ -598,6 +598,7 @@ export default function App() {
 
   const appRef = useRef(null);
   const heroSentinelRef = useRef(null);
+  const heroSectionRef = useRef(null);
   const philosophySectionRef = useRef(null);
   const protocolSectionRef = useRef(null);
 
@@ -617,6 +618,60 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
+  // Interatividade com o cursor na Hero (Spotlight esmeralda e tilt 3D sutil nas fontes)
+  useEffect(() => {
+    const hero = heroSectionRef.current;
+    if (!hero) return;
+
+    const spotlight = hero.querySelector('.hero-mouse-spotlight');
+    const headline = hero.querySelector('.hero-headline-3d');
+
+    let xTo, yTo, rotX, rotY;
+    if (spotlight) {
+      xTo = gsap.quickTo(spotlight, 'left', { duration: 0.6, ease: 'power3.out' });
+      yTo = gsap.quickTo(spotlight, 'top', { duration: 0.6, ease: 'power3.out' });
+    }
+    if (headline) {
+      rotX = gsap.quickTo(headline, 'rotationX', { duration: 0.8, ease: 'power2.out' });
+      rotY = gsap.quickTo(headline, 'rotationY', { duration: 0.8, ease: 'power2.out' });
+    }
+
+    const handleMouseMove = (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      if (xTo && yTo) {
+        xTo(x);
+        yTo(y);
+      }
+
+      if (rotX && rotY) {
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const tiltX = -((y - centerY) / centerY) * 6; // até 6 graus
+        const tiltY = ((x - centerX) / centerX) * 8;  // até 8 graus
+        rotX(tiltX);
+        rotY(tiltY);
+      }
+    };
+
+    const handleMouseLeave = () => {
+      if (rotX && rotY) {
+        rotX(0);
+        rotY(0);
+      }
+    };
+
+    hero.addEventListener('mousemove', handleMouseMove);
+    hero.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      hero.removeEventListener('mousemove', handleMouseMove);
+      hero.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
   // Master GSAP Lifecycle inside gsap.context()
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -633,6 +688,58 @@ export default function App() {
           delay: 0.15
         }
       );
+
+      // Hero Kinetic Scroll Timeline (Distorção cinética oposta das fontes no scroll)
+      if (heroSectionRef.current) {
+        const heroTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: heroSectionRef.current,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1.2
+          }
+        });
+
+        heroTl
+          // Linha 1 desliza para a esquerda e afasta o espaçamento entre letras
+          .to('.hero-title-line-1', {
+            xPercent: -14,
+            letterSpacing: '0.04em',
+            opacity: 0.45,
+            ease: 'none'
+          }, 0)
+          // Linha 2 desliza em sentido contrário (direita) e cresce com o brilho
+          .to('.hero-title-line-2', {
+            xPercent: 14,
+            scale: 1.08,
+            opacity: 0.95,
+            ease: 'none'
+          }, 0)
+          // Subtítulo e botões suavizam com leve desfoque cinematográfico ao descer
+          .to('.hero-subtitle', {
+            y: 40,
+            opacity: 0,
+            filter: 'blur(5px)',
+            ease: 'none'
+          }, 0)
+          .to('.hero-cta-group', {
+            y: 50,
+            opacity: 0,
+            filter: 'blur(6px)',
+            ease: 'none'
+          }, 0)
+          // O grid de linhas se move em velocidade de profundidade (parallax)
+          .to('.hero-grid-pattern', {
+            yPercent: 25,
+            ease: 'none'
+          }, 0)
+          // A luz esmeralda se expande com o scroll
+          .to('.hero-glow-orb', {
+            scale: 1.4,
+            opacity: 0.4,
+            ease: 'none'
+          }, 0);
+      }
 
       // 2. Features Cards Staggered Entrance (stagger: 0.15)
       gsap.fromTo(
@@ -781,7 +888,7 @@ export default function App() {
   };
 
   return (
-    <div ref={appRef} className="relative min-h-screen bg-[#FAF8F5] text-[#2A2A35] selection:bg-[#C9A84C] selection:text-[#0D0D12]">
+    <div ref={appRef} className="relative min-h-screen bg-[#FAF8F5] text-[#1E1E1E] selection:bg-[#02b6a4] selection:text-[#1E1E1E]">
       {/* ====================================================================
           GLOBAL INLINE SVG NOISE OVERLAY (0.05 Opacity — Fixed Design System)
           ==================================================================== */}
@@ -808,8 +915,8 @@ export default function App() {
           aria-label="Navegação Principal"
           className={`w-full max-w-5xl rounded-full px-5 md:px-7 py-3.5 transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] flex items-center justify-between ${
             navScrolled
-              ? 'bg-[#FAF8F5]/75 backdrop-blur-xl text-[#0D0D12] border border-[#0D0D12]/10 shadow-[0_20px_50px_rgba(13,13,18,0.12)]'
-              : 'bg-[#0D0D12]/30 backdrop-blur-md text-[#FAF8F5] border border-white/10'
+              ? 'bg-[#FAF8F5]/75 backdrop-blur-xl text-[#1E1E1E] border border-[#1E1E1E]/10 shadow-[0_20px_50px_rgba(13,13,18,0.12)]'
+              : 'bg-[#1E1E1E]/30 backdrop-blur-md text-[#FAF8F5] border border-white/10'
           }`}
         >
           {/* Brand Logo */}
@@ -817,46 +924,36 @@ export default function App() {
             href="#"
             className="nav-link-lift flex items-center gap-3 group focus:outline-none"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#C9A84C] text-[#0D0D12] font-serif italic font-bold text-lg tracking-tighter shadow-sm">
-              PA
-            </span>
-            <div className="flex flex-col">
-              <span className="font-sans font-extrabold tracking-[-0.04em] text-lg leading-none">
-                POONTOA
-              </span>
-              <span
-                className={`font-mono text-[9px] tracking-[0.22em] uppercase mt-0.5 ${
-                  navScrolled ? 'text-[#2A2A35]/70' : 'text-[#FAF8F5]/60'
-                }`}
-              >
-                DESIGN • MÍDIA • RESULTADOS
-              </span>
-            </div>
+            <img
+              src={navScrolled ? "/logo-green.png" : "/logo-white.png"}
+              alt="Poontoa"
+              className="h-8 sm:h-9 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+            />
           </a>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8 font-sans text-sm font-medium">
             <a
               href="#artefatos"
-              className="nav-link-lift opacity-80 hover:opacity-100 hover:text-[#C9A84C]"
+              className="nav-link-lift opacity-80 hover:opacity-100 hover:text-[#02b6a4]"
             >
               Valências
             </a>
             <a
               href="#manifesto"
-              className="nav-link-lift opacity-80 hover:opacity-100 hover:text-[#C9A84C]"
+              className="nav-link-lift opacity-80 hover:opacity-100 hover:text-[#02b6a4]"
             >
               Filosofia
             </a>
             <a
               href="#protocolo"
-              className="nav-link-lift opacity-80 hover:opacity-100 hover:text-[#C9A84C]"
+              className="nav-link-lift opacity-80 hover:opacity-100 hover:text-[#02b6a4]"
             >
               Protocolo
             </a>
             <a
               href="#investimento"
-              className="nav-link-lift opacity-80 hover:opacity-100 hover:text-[#C9A84C]"
+              className="nav-link-lift opacity-80 hover:opacity-100 hover:text-[#02b6a4]"
             >
               Planos & Combos
             </a>
@@ -878,7 +975,7 @@ export default function App() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-full border border-current/15 hover:border-[#C9A84C] transition-colors"
+            className="md:hidden p-2 rounded-full border border-current/15 hover:border-[#02b6a4] transition-colors"
             aria-label="Abrir menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -887,7 +984,7 @@ export default function App() {
 
         {/* Mobile Dropdown Pill */}
         {mobileMenuOpen && (
-          <div className="fixed top-24 left-4 right-4 bg-[#0D0D12]/95 backdrop-blur-2xl text-[#FAF8F5] rounded-[2rem] p-6 border border-white/15 shadow-2xl md:hidden flex flex-col gap-4 z-50">
+          <div className="fixed top-24 left-4 right-4 bg-[#1E1E1E]/95 backdrop-blur-2xl text-[#FAF8F5] rounded-[2rem] p-6 border border-white/15 shadow-2xl md:hidden flex flex-col gap-4 z-50">
             <a
               href="#artefatos"
               onClick={() => setMobileMenuOpen(false)}
@@ -932,69 +1029,103 @@ export default function App() {
       </header>
 
       {/* ====================================================================
-          B. HERO SECTION — "A Cena de Abertura"
+          B. HERO SECTION — "A Cena de Abertura (Brutalist Grid & Illumination)"
           ==================================================================== */}
-      <section className="relative h-[100dvh] min-h-[680px] w-full overflow-hidden bg-[#0D0D12] flex items-end">
+      {/* ====================================================================
+          B. HERO SECTION — "A Cena de Abertura (Brutalist Grid, Motion & Kinetic Typography)"
+          ==================================================================== */}
+      <section
+        id="inicio"
+        ref={heroSectionRef}
+        className="relative min-h-[100dvh] w-full overflow-hidden bg-[#1E1E1E] flex flex-col justify-center items-center pt-28 pb-16 px-6 md:px-12 select-none"
+      >
         {/* Sentinel for Navbar IntersectionObserver */}
         <div ref={heroSentinelRef} className="absolute top-0 left-0 right-0 h-20 pointer-events-none" />
 
-        {/* Unsplash Background Image matching Preset B `imageMood` (dark marble, gold accents, architectural shadows, luxury interiors) */}
-        <img
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2200&q=85"
-          alt="Ateliê arquitetônico sombrio em mármore e luz dourada"
-          className="absolute inset-0 h-full w-full object-cover object-center scale-105 opacity-55"
+        {/* 1. Background Grid Pattern com Parallax no Scroll */}
+        <div
+          className="hero-grid-pattern absolute inset-0 pointer-events-none opacity-35 will-change-transform"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px)
+            `,
+            backgroundSize: '48px 48px'
+          }}
         />
 
-        {/* Heavy Gradient Overlay from Primary (#0D0D12) to Black */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D12] via-[#0D0D12]/80 to-black/60" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(201,168,76,0.14),transparent_55%)]" />
+        {/* 2. Iluminação de Fundo Base Verde Esmeralda (#02b6a4) */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: `radial-gradient(circle at 50% 45%, rgba(2, 182, 164, 0.28) 0%, rgba(2, 182, 164, 0.08) 42%, transparent 72%)`
+          }}
+        />
 
-        {/* Hero Content pushed to the bottom-left third */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pb-14 md:pb-20 lg:pb-24">
-          <div className="max-w-4xl">
-            {/* Monospace Eyebrow */}
-            <div className="hero-reveal inline-flex items-center gap-3 rounded-full bg-white/5 border border-white/15 backdrop-blur-md px-4 py-2 mb-6">
-              <span className="h-2 w-2 rounded-full bg-[#C9A84C]" />
-              <span className="font-mono text-[11px] md:text-xs uppercase tracking-[0.2em] text-[#FAF8F5]/90">
-                POONTOA // AGÊNCIA DE PUBLICIDADE & PERFORMANCE CRIATIVA
-              </span>
-            </div>
+        {/* 3. Glowing Atmosphere Orb (Expande no Scroll) */}
+        <div className="hero-glow-orb absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[820px] h-[340px] sm:h-[460px] bg-[#02b6a4]/20 rounded-full blur-[140px] pointer-events-none will-change-transform" />
 
-            {/* Hero Pattern Preset B: "[Substantivo aspiracional] encontra a/o" (Bold Sans) / "[Palavra de precisão]." (Massive Serif Italic) */}
-            <h1 className="text-[#FAF8F5] tracking-tight">
-              <span className="hero-reveal block font-sans font-bold text-2xl sm:text-4xl md:text-5xl tracking-[-0.03em] text-[#FAF8F5]/90 mb-1 md:mb-2">
-                Autoridade encontra a
+        {/* 4. Mouse-Follower Spotlight (A luz segue suavemente o cursor do usuário) */}
+        <div
+          className="hero-mouse-spotlight absolute w-[520px] h-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none opacity-0 sm:opacity-80 transition-opacity duration-700"
+          style={{
+            background: 'radial-gradient(circle, rgba(2, 182, 164, 0.22) 0%, rgba(2, 182, 164, 0.06) 45%, transparent 70%)'
+          }}
+        />
+
+        {/* 5. Vignette Fade (Escurece as bordas suavemente) */}
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_25%,#1E1E1E_92%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#1E1E1E] to-transparent pointer-events-none" />
+
+        {/* Side Code Indicator (estilo da referência) */}
+        <div className="hidden lg:block absolute left-8 top-1/2 -translate-y-1/2 pointer-events-none z-10">
+          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-[#FAF8F5]/35 -rotate-90 block origin-center">
+            // PNT-2026
+          </span>
+        </div>
+
+        {/* Hero Content — Totalmente Centralizado com Perspectiva 3D */}
+        <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center text-center">
+          {/* Headline Centralizada com Efeito Cinético ao Rolar o Mouse */}
+          <div className="hero-perspective-wrapper w-full">
+            <h1 className="hero-headline-3d text-[#FAF8F5] tracking-tight uppercase transition-transform duration-300 ease-out">
+              {/* Linha 1: Desliza para a esquerda ao rolar */}
+              <span className="hero-title-line-1 hero-reveal block font-montserrat font-black text-3xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.25rem] leading-[1] text-[#FAF8F5] drop-shadow-[0_10px_35px_rgba(0,0,0,0.8)] will-change-transform">
+                A agência que
               </span>
-              <span className="hero-reveal block font-serif italic font-normal text-6xl sm:text-8xl md:text-[7.25rem] lg:text-[8.5rem] leading-[0.92] text-[#C9A84C] drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
-                Precisão.
+              {/* Linha 2: Desliza para a direita em sentido oposto com pulsar de luz */}
+              <span className="hero-title-line-2 hero-reveal block font-montserrat font-black text-3xl sm:text-5xl md:text-6xl lg:text-[4.75rem] xl:text-[5.5rem] leading-[1.02] text-[#02b6a4] animate-neon-pulse drop-shadow-[0_0_40px_rgba(2,182,164,0.38)] mt-2 md:mt-3 will-change-transform">
+                sua empresa precisa!
               </span>
             </h1>
-
-            {/* Brand Purpose Subtitle */}
-            <p className="hero-reveal mt-6 max-w-2xl font-sans text-base sm:text-lg md:text-xl text-[#FAF8F5]/75 font-light leading-relaxed">
-              Transformamos marcas em referências de mercado unindo direção de arte magnética, produção audiovisual de alta retenção e engenharia de tráfego pago orientada por dados.
-            </p>
-
-            {/* Primary CTA & Quick Telemetry Pill */}
-            <div className="hero-reveal mt-9 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-              <MagneticButton
-                variant="accent"
-                onClick={() => openProposalWithPlan('Diagnóstico & Proposta Comercial')}
-                className="text-base px-8 py-4"
-              >
-                <span>Solicitar uma proposta comercial</span>
-                <ArrowUpRight className="w-5 h-5" />
-              </MagneticButton>
-
-              <a
-                href="#investimento"
-                className="nav-link-lift inline-flex items-center justify-center gap-2.5 font-mono text-xs uppercase tracking-widest text-[#FAF8F5]/80 hover:text-[#C9A84C] py-3 px-4"
-              >
-                <span>Ver Planos & Combos 2026</span>
-                <ChevronRight className="w-4 h-4 text-[#C9A84C]" />
-              </a>
-            </div>
           </div>
+
+          {/* Subtítulo Centralizado com Leve Desfoque Cinematográfico no Scroll */}
+          <p className="hero-subtitle hero-reveal mt-7 max-w-2xl font-sans text-sm sm:text-base md:text-lg text-[#FAF8F5]/75 font-normal leading-relaxed will-change-transform">
+            Transformamos marcas em referências de mercado unindo direção de arte magnética, produção audiovisual de alta retenção e engenharia de tráfego pago orientada por dados.
+          </p>
+
+          {/* Botões Centrais */}
+          <div className="hero-cta-group hero-reveal mt-9 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 w-full will-change-transform">
+            <MagneticButton
+              variant="accent"
+              onClick={() => openProposalWithPlan('Diagnóstico & Proposta Comercial')}
+              className="text-sm md:text-base px-8 py-4 font-bold tracking-wide shadow-[0_10px_30px_rgba(2,182,164,0.25)]"
+            >
+              <span>Solicitar uma proposta comercial</span>
+              <ArrowUpRight className="w-5 h-5" />
+            </MagneticButton>
+
+            <a
+              href="#investimento"
+              className="nav-link-lift inline-flex items-center justify-center gap-2.5 font-mono text-xs uppercase tracking-widest text-[#FAF8F5] bg-[#242424] hover:bg-[#2c2c2c] border border-white/10 hover:border-[#02b6a4]/50 px-7 py-4 rounded-full transition-all duration-300"
+            >
+              <span>Ver Planos & Combos 2026</span>
+              <ChevronRight className="w-4 h-4 text-[#02b6a4]" />
+            </a>
+          </div>
+
+
         </div>
       </section>
 
@@ -1002,21 +1133,16 @@ export default function App() {
           C. FEATURES — "Artefatos Funcionais Interativos"
           ==================================================================== */}
       <section id="artefatos" className="relative py-24 md:py-36 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div>
-            <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#C9A84C] bg-[#0D0D12] px-4 py-1.5 rounded-full inline-block mb-4">
-              ENGENHARIA CRIATIVA // 03 PILARES
+        <div className="mb-14 md:mb-16">
+          <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#02b6a4] bg-[#02b6a4]/10 border border-[#02b6a4]/25 px-4 py-1.5 rounded-full inline-block mb-4">
+            ENGENHARIA CRIATIVA // 03 PILARES
+          </span>
+          <h2 className="font-sans font-extrabold text-3xl sm:text-5xl text-[#1E1E1E] tracking-[-0.03em] leading-[1.08]">
+            Artefatos de crescimento{' '}
+            <span className="text-[#02b6a4] font-bold">
+              sob medida.
             </span>
-            <h2 className="font-sans font-extrabold text-3xl sm:text-5xl text-[#0D0D12] tracking-[-0.03em] leading-[1.08]">
-              Artefatos de crescimento{' '}
-              <span className="font-serif italic font-normal text-[#C9A84C] bg-[#0D0D12] px-4 py-0.5 rounded-[1.5rem] inline-block">
-                sob medida.
-              </span>
-            </h2>
-          </div>
-          <p className="font-sans text-sm md:text-base text-[#2A2A35]/75 max-w-md leading-relaxed">
-            Cada entrega da Poontoa opera como uma engrenagem de relojoaria: estética que constrói percepção de valor e mídia que converte atenção em faturamento.
-          </p>
+          </h2>
         </div>
 
         {/* 3 Interactive Functional Artifact Cards */}
@@ -1039,7 +1165,7 @@ export default function App() {
       <section
         id="manifesto"
         ref={philosophySectionRef}
-        className="relative w-full overflow-hidden bg-[#0D0D12] text-[#FAF8F5] py-28 md:py-40 px-6 md:px-12 rounded-[2.5rem] md:rounded-[3rem] my-8"
+        className="relative w-full overflow-hidden bg-[#1E1E1E] text-[#FAF8F5] py-28 md:py-40 px-6 md:px-12 rounded-[2.5rem] md:rounded-[3rem] my-8"
       >
         {/* Parallax Texture Image behind text */}
         <img
@@ -1047,10 +1173,10 @@ export default function App() {
           alt="Sombras arquitetônicas e textura de mármore escuro"
           className="philosophy-parallax-bg absolute -top-24 inset-x-0 h-[130%] w-full object-cover opacity-15 pointer-events-none"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D12] via-transparent to-[#0D0D12]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1E1E1E] via-transparent to-[#1E1E1E]" />
 
         <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.24em] text-[#C9A84C] mb-10">
+          <div className="inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.24em] text-[#02b6a4] mb-10">
             <Sparkles className="w-4 h-4" />
             <span>MANIFESTO POONTOA // IDEIAS QUE VIRAM RESULTADOS</span>
           </div>
@@ -1064,14 +1190,14 @@ export default function App() {
             ))}
           </p>
 
-          {/* Statement 2: Massive Drama Serif Italic + Accent keyword */}
-          <h2 className="font-serif italic font-normal text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] leading-[1.06] tracking-tight text-[#FAF8F5]">
+          {/* Statement 2: Montserrat Bold com espaçamento entre linhas otimizado */}
+          <h2 className="font-montserrat font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[3.1rem] leading-[1.45] tracking-tight text-[#FAF8F5]">
             {manifestoDramaWords.map((word, idx) => (
               <span key={idx} className="manifesto-word inline-block mr-3">
                 {word}
               </span>
             ))}
-            <span className="manifesto-word inline-block text-[#C9A84C] underline decoration-[#C9A84C]/30 underline-offset-8">
+            <span className="manifesto-word inline-block text-[#02b6a4] underline decoration-[#02b6a4]/30 underline-offset-8">
               conversão de alta precisão.
             </span>
           </h2>
@@ -1079,7 +1205,7 @@ export default function App() {
           {/* Manifesto Bottom Metrics */}
           <div className="mt-16 pt-12 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-8 font-mono">
             <div>
-              <span className="block text-2xl md:text-4xl font-bold text-[#C9A84C]">360º</span>
+              <span className="block text-2xl md:text-4xl font-bold text-[#02b6a4]">360º</span>
               <span className="text-xs text-[#FAF8F5]/60 uppercase tracking-wider mt-1 block">
                 Design, Vídeo, Web & Ads
               </span>
@@ -1091,7 +1217,7 @@ export default function App() {
               </span>
             </div>
             <div>
-              <span className="block text-2xl md:text-4xl font-bold text-[#C9A84C]">ROI+</span>
+              <span className="block text-2xl md:text-4xl font-bold text-[#02b6a4]">ROI+</span>
               <span className="text-xs text-[#FAF8F5]/60 uppercase tracking-wider mt-1 block">
                 Foco em Performance Real
               </span>
@@ -1111,16 +1237,16 @@ export default function App() {
           ==================================================================== */}
       <section id="protocolo" ref={protocolSectionRef} className="relative py-24 md:py-32 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
         <div className="mb-16 max-w-3xl">
-          <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#C9A84C] bg-[#0D0D12] px-4 py-1.5 rounded-full inline-block mb-4">
+          <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#02b6a4] bg-[#02b6a4]/10 border border-[#02b6a4]/25 px-4 py-1.5 rounded-full inline-block mb-4">
             METODOLOGIA PROPRIETÁRIA
           </span>
-          <h2 className="font-sans font-extrabold text-3xl sm:text-5xl text-[#0D0D12] tracking-[-0.03em]">
+          <h2 className="font-sans font-extrabold text-3xl sm:text-5xl text-[#1E1E1E] tracking-[-0.03em]">
             O Protocolo de{' '}
-            <span className="font-serif italic font-normal text-[#C9A84C] bg-[#0D0D12] px-4 py-0.5 rounded-[1.5rem] inline-block">
+            <span className="text-[#02b6a4] font-bold">
               Transformação.
             </span>
           </h2>
-          <p className="font-sans text-base text-[#2A2A35]/75 mt-4">
+          <p className="font-sans text-base text-[#1E1E1E]/75 mt-4">
             Role para inspecionar as três fases do nosso método operacional que transforma negócios locais e digitais em marcas líderes.
           </p>
         </div>
@@ -1128,9 +1254,9 @@ export default function App() {
         {/* Sticky Stacking Container */}
         <div className="relative space-y-12 md:space-y-20">
           {/* PROTOCOL CARD 01: Concentric Geometric Watchmaker Gear SVG */}
-          <div className="protocol-stack-card sticky top-24 min-h-[76vh] w-full rounded-[2.5rem] md:rounded-[3rem] bg-[#0D0D12] text-[#FAF8F5] border border-white/10 p-8 sm:p-12 md:p-16 shadow-[0_30px_90px_rgba(13,13,18,0.35)] flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden">
+          <div className="protocol-stack-card sticky top-24 min-h-[76vh] w-full rounded-[2.5rem] md:rounded-[3rem] bg-[#1E1E1E] text-[#FAF8F5] border border-white/10 p-8 sm:p-12 md:p-16 shadow-[0_30px_90px_rgba(13,13,18,0.35)] flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden">
             <div className="relative z-10 max-w-xl">
-              <div className="inline-flex items-center gap-3 font-mono text-xs text-[#C9A84C] bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-6">
+              <div className="inline-flex items-center gap-3 font-mono text-xs text-[#02b6a4] bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-6">
                 <span>PASSO 01 // DIAGNÓSTICO & IDENTIDADE</span>
               </div>
               <h3 className="font-sans font-bold text-3xl sm:text-5xl tracking-tight text-[#FAF8F5] mb-5">
@@ -1139,7 +1265,7 @@ export default function App() {
               <p className="font-sans text-base sm:text-lg text-[#FAF8F5]/70 leading-relaxed mb-8">
                 Mapeamos o território competitivo da sua marca, refinamos sua paleta cromática, tipografia e criamos uma linha editorial inconfundível que comunica autoridade antes mesmo da primeira palavra ser lida.
               </p>
-              <div className="flex flex-wrap gap-3 font-mono text-xs text-[#C9A84C]">
+              <div className="flex flex-wrap gap-3 font-mono text-xs text-[#02b6a4]">
                 <span className="bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full">
                   • Identidade Visual
                 </span>
@@ -1161,7 +1287,7 @@ export default function App() {
                     cy="120"
                     r="95"
                     fill="none"
-                    stroke="#C9A84C"
+                    stroke="#02b6a4"
                     strokeWidth="1.2"
                     strokeDasharray="8 6"
                     opacity="0.6"
@@ -1183,7 +1309,7 @@ export default function App() {
                       y1="16"
                       x2="120"
                       y2="28"
-                      stroke="#C9A84C"
+                      stroke="#02b6a4"
                       strokeWidth="2"
                       transform={`rotate(${deg} 120 120)`}
                     />
@@ -1193,7 +1319,7 @@ export default function App() {
                   <polygon
                     points="120,48 182,120 120,192 58,120"
                     fill="none"
-                    stroke="#C9A84C"
+                    stroke="#02b6a4"
                     strokeWidth="1.5"
                     opacity="0.75"
                   />
@@ -1208,19 +1334,19 @@ export default function App() {
                     opacity="0.25"
                   />
                 </g>
-                <circle cx="120" cy="120" r="10" fill="#C9A84C" />
-                <circle cx="120" cy="120" r="4" fill="#0D0D12" />
+                <circle cx="120" cy="120" r="10" fill="#02b6a4" />
+                <circle cx="120" cy="120" r="4" fill="#1E1E1E" />
               </svg>
-              <span className="absolute bottom-3 right-4 font-mono text-[10px] text-[#C9A84C]/80">
+              <span className="absolute bottom-3 right-4 font-mono text-[10px] text-[#02b6a4]/80">
                 CALIBRAÇÃO // 01
               </span>
             </div>
           </div>
 
           {/* PROTOCOL CARD 02: Horizontal Laser Scanning over Matrix Grid */}
-          <div className="protocol-stack-card sticky top-24 min-h-[76vh] w-full rounded-[2.5rem] md:rounded-[3rem] bg-[#14141D] text-[#FAF8F5] border border-[#C9A84C]/30 p-8 sm:p-12 md:p-16 shadow-[0_30px_90px_rgba(13,13,18,0.45)] flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden">
+          <div className="protocol-stack-card sticky top-24 min-h-[76vh] w-full rounded-[2.5rem] md:rounded-[3rem] bg-[#252525] text-[#FAF8F5] border border-[#02b6a4]/30 p-8 sm:p-12 md:p-16 shadow-[0_30px_90px_rgba(13,13,18,0.45)] flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden">
             <div className="relative z-10 max-w-xl">
-              <div className="inline-flex items-center gap-3 font-mono text-xs text-[#C9A84C] bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-6">
+              <div className="inline-flex items-center gap-3 font-mono text-xs text-[#02b6a4] bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-6">
                 <span>PASSO 02 // PRODUÇÃO & ECOSSISTEMA</span>
               </div>
               <h3 className="font-sans font-bold text-3xl sm:text-5xl tracking-tight text-[#FAF8F5] mb-5">
@@ -1229,7 +1355,7 @@ export default function App() {
               <p className="font-sans text-base sm:text-lg text-[#FAF8F5]/70 leading-relaxed mb-8">
                 Entramos em produção intensiva: carrosséis magnéticos, edição de vídeo com retenção milimétrica, motion graphics e páginas de alta conversão prontas para receber tráfego qualificado.
               </p>
-              <div className="flex flex-wrap gap-3 font-mono text-xs text-[#C9A84C]">
+              <div className="flex flex-wrap gap-3 font-mono text-xs text-[#02b6a4]">
                 <span className="bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full">
                   • Pacotes de Artes & Stories
                 </span>
@@ -1243,7 +1369,7 @@ export default function App() {
             </div>
 
             {/* Unique SVG Animation 2: Laser Scanning Line across Cell Grid */}
-            <div className="relative flex items-center justify-center w-64 h-64 sm:w-80 sm:h-80 shrink-0 bg-[#0D0D12] rounded-[2rem] border border-white/10 p-6 overflow-hidden">
+            <div className="relative flex items-center justify-center w-64 h-64 sm:w-80 sm:h-80 shrink-0 bg-[#1E1E1E] rounded-[2rem] border border-white/10 p-6 overflow-hidden">
               <svg viewBox="0 0 220 220" className="w-full h-full">
                 {/* Grid of nodes */}
                 {Array.from({ length: 7 }).map((_, row) =>
@@ -1259,15 +1385,15 @@ export default function App() {
                           width="16"
                           height="16"
                           rx="4"
-                          fill={highlight ? 'rgba(201,168,76,0.18)' : 'rgba(250,248,245,0.04)'}
-                          stroke={highlight ? '#C9A84C' : 'rgba(250,248,245,0.12)'}
+                          fill={highlight ? 'rgba(2, 182, 164,0.18)' : 'rgba(250,248,245,0.04)'}
+                          stroke={highlight ? '#02b6a4' : 'rgba(250,248,245,0.12)'}
                           strokeWidth="1"
                         />
                         <circle
                           cx={cx}
                           cy={cy}
                           r="2"
-                          fill={highlight ? '#C9A84C' : 'rgba(250,248,245,0.3)'}
+                          fill={highlight ? '#02b6a4' : 'rgba(250,248,245,0.3)'}
                         />
                       </g>
                     );
@@ -1275,17 +1401,17 @@ export default function App() {
                 )}
               </svg>
               {/* Horizontal Laser Bar */}
-              <div className="animate-laser-scan absolute top-6 left-4 right-4 h-0.5 bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent shadow-[0_0_20px_4px_rgba(201,168,76,0.75)]" />
-              <span className="absolute bottom-3 right-4 font-mono text-[10px] text-[#C9A84C]/80">
+              <div className="animate-laser-scan absolute top-6 left-4 right-4 h-0.5 bg-gradient-to-r from-transparent via-[#02b6a4] to-transparent shadow-[0_0_20px_4px_rgba(2, 182, 164,0.75)]" />
+              <span className="absolute bottom-3 right-4 font-mono text-[10px] text-[#02b6a4]/80">
                 SCANNER CRIATIVO // 02
               </span>
             </div>
           </div>
 
           {/* PROTOCOL CARD 03: Pulsing Waveform (EKG Conversion Path) */}
-          <div className="protocol-stack-card sticky top-24 min-h-[76vh] w-full rounded-[2.5rem] md:rounded-[3rem] bg-[#0D0D12] text-[#FAF8F5] border border-white/15 p-8 sm:p-12 md:p-16 shadow-[0_30px_90px_rgba(13,13,18,0.5)] flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden">
+          <div className="protocol-stack-card sticky top-24 min-h-[76vh] w-full rounded-[2.5rem] md:rounded-[3rem] bg-[#1E1E1E] text-[#FAF8F5] border border-white/15 p-8 sm:p-12 md:p-16 shadow-[0_30px_90px_rgba(13,13,18,0.5)] flex flex-col lg:flex-row items-center justify-between gap-10 overflow-hidden">
             <div className="relative z-10 max-w-xl">
-              <div className="inline-flex items-center gap-3 font-mono text-xs text-[#C9A84C] bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-6">
+              <div className="inline-flex items-center gap-3 font-mono text-xs text-[#02b6a4] bg-white/5 border border-white/10 px-4 py-1.5 rounded-full mb-6">
                 <span>PASSO 03 // PERFORMANCE & ESCALA</span>
               </div>
               <h3 className="font-sans font-bold text-3xl sm:text-5xl tracking-tight text-[#FAF8F5] mb-5">
@@ -1294,7 +1420,7 @@ export default function App() {
               <p className="font-sans text-base sm:text-lg text-[#FAF8F5]/70 leading-relaxed mb-8">
                 Ativamos campanhas de alta precisão no Meta Ads e Google Ads. Monitoramos métricas em tempo real, testamos variações criativas e escalamos os anúncios vencedores para gerar demanda previsível todos os dias.
               </p>
-              <div className="flex flex-wrap gap-3 font-mono text-xs text-[#C9A84C]">
+              <div className="flex flex-wrap gap-3 font-mono text-xs text-[#02b6a4]">
                 <span className="bg-white/5 border border-white/10 px-3.5 py-1.5 rounded-full">
                   • Meta Ads & Google Ads
                 </span>
@@ -1317,7 +1443,7 @@ export default function App() {
                 <path
                   d="M 10 80 L 55 80 L 70 55 L 85 110 L 105 22 L 125 130 L 142 65 L 158 80 L 230 80"
                   fill="none"
-                  stroke="rgba(201,168,76,0.2)"
+                  stroke="rgba(2, 182, 164,0.2)"
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -1326,16 +1452,16 @@ export default function App() {
                 <path
                   d="M 10 80 L 55 80 L 70 55 L 85 110 L 105 22 L 125 130 L 142 65 L 158 80 L 230 80"
                   fill="none"
-                  stroke="#C9A84C"
+                  stroke="#02b6a4"
                   strokeWidth="3.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   className="animate-ekg-wave"
                 />
-                <circle cx="105" cy="22" r="4.5" fill="#C9A84C" className="animate-ping" />
+                <circle cx="105" cy="22" r="4.5" fill="#02b6a4" className="animate-ping" />
                 <circle cx="105" cy="22" r="4" fill="#FAF8F5" />
               </svg>
-              <span className="absolute bottom-3 right-4 font-mono text-[10px] text-[#C9A84C]/80">
+              <span className="absolute bottom-3 right-4 font-mono text-[10px] text-[#02b6a4]/80">
                 PULSO DE ROI // 03
               </span>
             </div>
@@ -1348,16 +1474,16 @@ export default function App() {
           ==================================================================== */}
       <section id="investimento" className="relative py-24 md:py-36 px-6 md:px-12 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#C9A84C] bg-[#0D0D12] px-4 py-1.5 rounded-full inline-block mb-4">
+          <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#02b6a4] bg-[#02b6a4]/10 border border-[#02b6a4]/25 px-4 py-1.5 rounded-full inline-block mb-4">
             INVESTIMENTO TRANSPARENTE // PLANOS & PACOTES
           </span>
-          <h2 className="font-sans font-extrabold text-3xl sm:text-5xl text-[#0D0D12] tracking-[-0.03em]">
+          <h2 className="font-sans font-extrabold text-3xl sm:text-5xl text-[#1E1E1E] tracking-[-0.03em]">
             Planos Mensais de{' '}
-            <span className="font-serif italic font-normal text-[#C9A84C] bg-[#0D0D12] px-4 py-0.5 rounded-[1.5rem] inline-block">
+            <span className="text-[#02b6a4] font-bold">
               Aceleração.
             </span>
           </h2>
-          <p className="font-sans text-base text-[#2A2A35]/75 mt-4">
+          <p className="font-sans text-base text-[#1E1E1E]/75 mt-4">
             Escolha a cadência mensal ideal para sua marca ou explore abaixo nossos combos de lançamento, sites e produção audiovisual avulsa.
           </p>
         </div>
@@ -1365,28 +1491,28 @@ export default function App() {
         {/* 3 Tier Pricing Grid ("Essencial", "Performance" highlighted, "Enterprise") */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {/* Tier 1: Essencial (Start) */}
-          <div className="pricing-card-item flex flex-col justify-between rounded-[2.25rem] bg-[#FAF8F5] border border-[#0D0D12]/12 p-8 md:p-10 shadow-[0_20px_50px_rgba(13,13,18,0.05)]">
+          <div className="pricing-card-item flex flex-col justify-between rounded-[2.25rem] bg-[#FAF8F5] border border-[#1E1E1E]/12 p-8 md:p-10 shadow-[0_20px_50px_rgba(13,13,18,0.05)]">
             <div>
               <div className="flex items-center justify-between mb-6">
-                <span className="font-mono text-xs uppercase tracking-widest text-[#2A2A35]/70">
+                <span className="font-mono text-xs uppercase tracking-widest text-[#1E1E1E]/70">
                   NÍVEL 01 // START
                 </span>
-                <span className="font-mono text-xs bg-[#0D0D12]/5 text-[#0D0D12] px-3 py-1 rounded-full">
+                <span className="font-mono text-xs bg-[#1E1E1E]/5 text-[#1E1E1E] px-3 py-1 rounded-full">
                   Presença Constante
                 </span>
               </div>
-              <h3 className="font-sans font-bold text-2xl text-[#0D0D12] mb-2">Essencial</h3>
-              <p className="font-sans text-sm text-[#2A2A35]/70 mb-6">
+              <h3 className="font-sans font-bold text-2xl text-[#1E1E1E] mb-2">Essencial</h3>
+              <p className="font-sans text-sm text-[#1E1E1E]/70 mb-6">
                 Ideal para marcas que buscam profissionalizar o posicionamento digital com consistência visual.
               </p>
-              <div className="flex items-baseline gap-1 mb-8 pb-6 border-b border-[#0D0D12]/10">
-                <span className="font-sans font-extrabold text-4xl sm:text-5xl text-[#0D0D12] tracking-tight">
+              <div className="flex items-baseline gap-1 mb-8 pb-6 border-b border-[#1E1E1E]/10">
+                <span className="font-sans font-extrabold text-4xl sm:text-5xl text-[#1E1E1E] tracking-tight">
                   R$ 750
                 </span>
-                <span className="font-mono text-xs text-[#2A2A35]/60">/mês</span>
+                <span className="font-mono text-xs text-[#1E1E1E]/60">/mês</span>
               </div>
 
-              <ul className="space-y-3.5 font-sans text-sm text-[#2A2A35] mb-8">
+              <ul className="space-y-3.5 font-sans text-sm text-[#1E1E1E] mb-8">
                 {[
                   '8 Artes estratégicas para feed',
                   '4 Sequências de stories magnéticos',
@@ -1396,7 +1522,7 @@ export default function App() {
                   'Opcional: Gestão de Tráfego Essencial (+R$ 600)'
                 ].map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0D0D12]/10 text-[#0D0D12]">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1E1E1E]/10 text-[#1E1E1E]">
                       <Check className="w-3 h-3" />
                     </span>
                     <span>{feature}</span>
@@ -1416,14 +1542,14 @@ export default function App() {
           </div>
 
           {/* Tier 2: Performance (Highlighted Middle Card — Primary Obsidian BG + Champagne Accent CTA) */}
-          <div className="pricing-card-item relative flex flex-col justify-between rounded-[2.25rem] bg-[#0D0D12] text-[#FAF8F5] ring-2 ring-[#C9A84C] p-8 md:p-10 shadow-[0_30px_90px_rgba(13,13,18,0.35)] lg:-translate-y-4">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#C9A84C] text-[#0D0D12] font-mono text-[11px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
+          <div className="pricing-card-item relative flex flex-col justify-between rounded-[2.25rem] bg-[#1E1E1E] text-[#FAF8F5] ring-2 ring-[#02b6a4] p-8 md:p-10 shadow-[0_30px_90px_rgba(13,13,18,0.35)] lg:-translate-y-4">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#02b6a4] text-[#1E1E1E] font-mono text-[11px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
               MAIS ESCOLHIDO // ALTA ESCALA
             </div>
 
             <div>
               <div className="flex items-center justify-between mb-6 mt-2">
-                <span className="font-mono text-xs uppercase tracking-widest text-[#C9A84C]">
+                <span className="font-mono text-xs uppercase tracking-widest text-[#02b6a4]">
                   NÍVEL 02 // PERFORMANCE
                 </span>
                 <span className="font-mono text-xs bg-white/10 text-[#FAF8F5] px-3 py-1 rounded-full">
@@ -1435,7 +1561,7 @@ export default function App() {
                 Operação completa de conteúdo, vídeo, copy e criativos de anúncios para dominar seu nicho.
               </p>
               <div className="flex items-baseline gap-1 mb-8 pb-6 border-b border-white/10">
-                <span className="font-sans font-extrabold text-4xl sm:text-5xl text-[#C9A84C] tracking-tight">
+                <span className="font-sans font-extrabold text-4xl sm:text-5xl text-[#02b6a4] tracking-tight">
                   R$ 1.800
                 </span>
                 <span className="font-mono text-xs text-[#FAF8F5]/60">/mês</span>
@@ -1453,7 +1579,7 @@ export default function App() {
                   'Disponível também na versão Profissional (R$ 1.200/mês)'
                 ].map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#C9A84C] text-[#0D0D12]">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#02b6a4] text-[#1E1E1E]">
                       <Check className="w-3 h-3" />
                     </span>
                     <span>{feature}</span>
@@ -1473,28 +1599,28 @@ export default function App() {
           </div>
 
           {/* Tier 3: Enterprise (Full-Service & Combos) */}
-          <div className="pricing-card-item flex flex-col justify-between rounded-[2.25rem] bg-[#FAF8F5] border border-[#0D0D12]/12 p-8 md:p-10 shadow-[0_20px_50px_rgba(13,13,18,0.05)]">
+          <div className="pricing-card-item flex flex-col justify-between rounded-[2.25rem] bg-[#FAF8F5] border border-[#1E1E1E]/12 p-8 md:p-10 shadow-[0_20px_50px_rgba(13,13,18,0.05)]">
             <div>
               <div className="flex items-center justify-between mb-6">
-                <span className="font-mono text-xs uppercase tracking-widest text-[#2A2A35]/70">
+                <span className="font-mono text-xs uppercase tracking-widest text-[#1E1E1E]/70">
                   NÍVEL 03 // FULL-SERVICE
                 </span>
-                <span className="font-mono text-xs bg-[#C9A84C]/20 text-[#0D0D12] px-3 py-1 rounded-full font-medium">
+                <span className="font-mono text-xs bg-[#02b6a4]/20 text-[#1E1E1E] px-3 py-1 rounded-full font-medium">
                   Ecossistema 360º
                 </span>
               </div>
-              <h3 className="font-sans font-bold text-2xl text-[#0D0D12] mb-2">Enterprise</h3>
-              <p className="font-sans text-sm text-[#2A2A35]/70 mb-6">
+              <h3 className="font-sans font-bold text-2xl text-[#1E1E1E] mb-2">Enterprise</h3>
+              <p className="font-sans text-sm text-[#1E1E1E]/70 mb-6">
                 Combinação de Tráfego Pago Estratégico, Site/Landing Page, Produção Audiovisual e Branding.
               </p>
-              <div className="flex items-baseline gap-2 mb-8 pb-6 border-b border-[#0D0D12]/10">
-                <span className="font-sans font-extrabold text-3xl sm:text-4xl text-[#0D0D12] tracking-tight">
+              <div className="flex items-baseline gap-2 mb-8 pb-6 border-b border-[#1E1E1E]/10">
+                <span className="font-sans font-extrabold text-3xl sm:text-4xl text-[#1E1E1E] tracking-tight">
                   R$ 3.500+
                 </span>
-                <span className="font-mono text-xs text-[#2A2A35]/60">/projeto ou mensal</span>
+                <span className="font-mono text-xs text-[#1E1E1E]/60">/projeto ou mensal</span>
               </div>
 
-              <ul className="space-y-3.5 font-sans text-sm text-[#2A2A35] mb-8">
+              <ul className="space-y-3.5 font-sans text-sm text-[#1E1E1E] mb-8">
                 {[
                   'Site Profissional ou Landing Page Cinematográfica',
                   'Gestão Estratégica Meta Ads + Google Ads',
@@ -1504,7 +1630,7 @@ export default function App() {
                   'Atendimento executivo online e presencial'
                 ].map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0D0D12]/10 text-[#0D0D12]">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1E1E1E]/10 text-[#1E1E1E]">
                       <Check className="w-3 h-3" />
                     </span>
                     <span>{feature}</span>
@@ -1525,10 +1651,10 @@ export default function App() {
         </div>
 
         {/* Interactive Poontoa Service Catalog (Combos Especiais, Audiovisual, Sites & Tráfego) */}
-        <div className="mt-20 rounded-[2.5rem] bg-[#0D0D12] text-[#FAF8F5] p-8 sm:p-12 border border-white/10 shadow-[0_24px_70px_rgba(13,13,18,0.2)]">
+        <div className="mt-20 rounded-[2.5rem] bg-[#1E1E1E] text-[#FAF8F5] p-8 sm:p-12 border border-white/10 shadow-[0_24px_70px_rgba(13,13,18,0.2)]">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-white/10">
             <div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#C9A84C] block mb-2">
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#02b6a4] block mb-2">
                 TABELA MODULAR POONTOA // SOLUÇÕES ESPECÍFICAS
               </span>
               <h3 className="font-sans font-bold text-2xl sm:text-3xl text-[#FAF8F5]">
@@ -1549,7 +1675,7 @@ export default function App() {
                   onClick={() => setActiveCatalogTab(tab.id)}
                   className={`font-mono text-xs px-4 py-2 rounded-full transition-all cursor-pointer ${
                     activeCatalogTab === tab.id
-                      ? 'bg-[#C9A84C] text-[#0D0D12] font-semibold shadow-sm'
+                      ? 'bg-[#02b6a4] text-[#1E1E1E] font-semibold shadow-sm'
                       : 'text-[#FAF8F5]/70 hover:text-[#FAF8F5]'
                   }`}
                 >
@@ -1563,24 +1689,24 @@ export default function App() {
             {catalogData[activeCatalogTab].map((item, idx) => (
               <div
                 key={idx}
-                className="flex flex-col justify-between rounded-[1.75rem] bg-white/[0.04] hover:bg-white/[0.07] border border-white/10 hover:border-[#C9A84C]/50 p-6 transition-all duration-300"
+                className="flex flex-col justify-between rounded-[1.75rem] bg-white/[0.04] hover:bg-white/[0.07] border border-white/10 hover:border-[#02b6a4]/50 p-6 transition-all duration-300"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-[#C9A84C] bg-[#C9A84C]/10 px-2.5 py-1 rounded-full">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-[#02b6a4] bg-[#02b6a4]/10 px-2.5 py-1 rounded-full">
                       {item.tag}
                     </span>
                   </div>
                   <h4 className="font-sans font-bold text-lg text-[#FAF8F5] mb-1">
                     {item.name}
                   </h4>
-                  <div className="font-mono text-xl font-bold text-[#C9A84C] mb-4">
+                  <div className="font-mono text-xl font-bold text-[#02b6a4] mb-4">
                     {item.price}
                   </div>
                   <ul className="space-y-2 font-sans text-xs text-[#FAF8F5]/70 mb-6">
                     {item.items.map((sub, sIdx) => (
                       <li key={sIdx} className="flex items-start gap-2">
-                        <span className="text-[#C9A84C] mt-0.5">•</span>
+                        <span className="text-[#02b6a4] mt-0.5">•</span>
                         <span>{sub}</span>
                       </li>
                     ))}
@@ -1590,7 +1716,7 @@ export default function App() {
                 <button
                   type="button"
                   onClick={() => openProposalWithPlan(`${item.name} (${item.price})`)}
-                  className="w-full py-2.5 px-4 rounded-full bg-white/10 hover:bg-[#C9A84C] text-[#FAF8F5] hover:text-[#0D0D12] font-mono text-xs font-medium transition-colors flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-2.5 px-4 rounded-full bg-white/10 hover:bg-[#02b6a4] text-[#FAF8F5] hover:text-[#1E1E1E] font-mono text-xs font-medium transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Selecionar pacote</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -1604,17 +1730,17 @@ export default function App() {
       {/* ====================================================================
           G. FOOTER — Deep Obsidian with System Operational Status
           ==================================================================== */}
-      <footer className="relative bg-[#0D0D12] text-[#FAF8F5] rounded-t-[4rem] pt-20 pb-12 px-6 md:px-12 mt-12 border-t border-white/10 overflow-hidden">
+      <footer className="relative bg-[#1E1E1E] text-[#FAF8F5] rounded-t-[4rem] pt-20 pb-12 px-6 md:px-12 mt-12 border-t border-white/10 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Top CTA Banner inside Footer */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-16 border-b border-white/10">
             <div>
-              <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#C9A84C] block mb-3">
+              <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#02b6a4] block mb-3">
                 PRÓXIMO PASSO // VAMOS CONVERSAR?
               </span>
               <h2 className="font-sans font-bold text-3xl sm:text-5xl tracking-tight text-[#FAF8F5]">
                 Sua marca com mais{' '}
-                <span className="font-serif italic font-normal text-[#C9A84C]">
+                <span className="font-sans font-bold text-[#02b6a4]">
                   presença e resultado.
                 </span>
               </h2>
@@ -1636,17 +1762,11 @@ export default function App() {
             {/* Col 1: Brand & Slogan */}
             <div className="lg:col-span-5 space-y-4">
               <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#C9A84C] text-[#0D0D12] font-serif italic font-bold text-xl">
-                  PA
-                </span>
-                <div>
-                  <span className="font-sans font-extrabold text-xl tracking-tight block">
-                    POONTOA
-                  </span>
-                  <span className="font-mono text-[10px] tracking-[0.22em] text-[#C9A84C] uppercase">
-                    IDEIAS QUE VIRAM RESULTADOS
-                  </span>
-                </div>
+                <img
+                  src="/logo-white.png"
+                  alt="Poontoa"
+                  className="h-10 sm:h-12 w-auto object-contain"
+                />
               </div>
               <p className="font-sans text-sm text-[#FAF8F5]/65 max-w-sm leading-relaxed">
                 Agência de publicidade e performance criativa que transforma marcas em referências de mercado. Design Gráfico, Social Media, Edição de Vídeo, Sites e Tráfego Pago.
@@ -1659,7 +1779,7 @@ export default function App() {
                   className="nav-link-lift inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full"
                 >
                   <svg
-                    className="w-3.5 h-3.5 text-[#C9A84C]"
+                    className="w-3.5 h-3.5 text-[#02b6a4]"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -1678,7 +1798,7 @@ export default function App() {
                   onClick={() => openProposalWithPlan('Atendimento Direto Poontoa')}
                   className="nav-link-lift inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full cursor-pointer"
                 >
-                  <MessageSquare className="w-3.5 h-3.5 text-[#C9A84C]" />
+                  <MessageSquare className="w-3.5 h-3.5 text-[#02b6a4]" />
                   <span>Online & Presencial</span>
                 </button>
               </div>
@@ -1686,7 +1806,7 @@ export default function App() {
 
             {/* Col 2: Navegação */}
             <div className="lg:col-span-3 space-y-3">
-              <h4 className="font-mono text-xs uppercase tracking-widest text-[#C9A84C]">
+              <h4 className="font-mono text-xs uppercase tracking-widest text-[#02b6a4]">
                 Arquitetura
               </h4>
               <ul className="space-y-2.5 font-sans text-sm text-[#FAF8F5]/70">
@@ -1715,7 +1835,7 @@ export default function App() {
 
             {/* Col 3: Especialidades */}
             <div className="lg:col-span-4 space-y-3">
-              <h4 className="font-mono text-xs uppercase tracking-widest text-[#C9A84C]">
+              <h4 className="font-mono text-xs uppercase tracking-widest text-[#02b6a4]">
                 Especialidades
               </h4>
               <ul className="space-y-2.5 font-sans text-sm text-[#FAF8F5]/70">
@@ -1753,7 +1873,7 @@ export default function App() {
           ==================================================================== */}
       {proposalModalOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-          <div className="relative w-full max-w-xl rounded-[2.5rem] bg-[#0D0D12] text-[#FAF8F5] border border-[#C9A84C]/40 p-7 sm:p-10 shadow-[0_30px_100px_rgba(0,0,0,0.85)]">
+          <div className="relative w-full max-w-xl rounded-[2.5rem] bg-[#1E1E1E] text-[#FAF8F5] border border-[#02b6a4]/40 p-7 sm:p-10 shadow-[0_30px_100px_rgba(0,0,0,0.85)]">
             <button
               type="button"
               onClick={() => setProposalModalOpen(false)}
@@ -1763,7 +1883,8 @@ export default function App() {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-[#C9A84C] bg-[#C9A84C]/10 px-3.5 py-1 rounded-full mb-4">
+            <img src="/logo-green.png" alt="Poontoa" className="h-8 w-auto object-contain mb-4" />
+            <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-[#02b6a4] bg-[#02b6a4]/10 px-3.5 py-1 rounded-full mb-4">
               <Sparkles className="w-3.5 h-3.5" />
               <span>BRIEFING EXECUTIVO POONTOA</span>
             </div>
@@ -1785,7 +1906,7 @@ export default function App() {
                     type="text"
                     value={selectedPlan}
                     onChange={(e) => setSelectedPlan(e.target.value)}
-                    className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 font-mono text-xs text-[#C9A84C] focus:outline-none focus:border-[#C9A84C]"
+                    className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 font-mono text-xs text-[#02b6a4] focus:outline-none focus:border-[#02b6a4]"
                   />
                 </div>
 
@@ -1800,7 +1921,7 @@ export default function App() {
                       placeholder="Ex: Arthur"
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                      className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 font-sans text-sm text-[#FAF8F5] placeholder:text-white/30 focus:outline-none focus:border-[#C9A84C]"
+                      className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 font-sans text-sm text-[#FAF8F5] placeholder:text-white/30 focus:outline-none focus:border-[#02b6a4]"
                     />
                   </div>
                   <div>
@@ -1813,7 +1934,7 @@ export default function App() {
                       placeholder="Ex: Sua Marca Ltda"
                       value={formState.brand}
                       onChange={(e) => setFormState({ ...formState, brand: e.target.value })}
-                      className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 font-sans text-sm text-[#FAF8F5] placeholder:text-white/30 focus:outline-none focus:border-[#C9A84C]"
+                      className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 font-sans text-sm text-[#FAF8F5] placeholder:text-white/30 focus:outline-none focus:border-[#02b6a4]"
                     />
                   </div>
                 </div>
@@ -1828,7 +1949,7 @@ export default function App() {
                     placeholder="(11) 99999-9999"
                     value={formState.whatsapp}
                     onChange={(e) => setFormState({ ...formState, whatsapp: e.target.value })}
-                    className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 font-sans text-sm text-[#FAF8F5] placeholder:text-white/30 focus:outline-none focus:border-[#C9A84C]"
+                    className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 font-sans text-sm text-[#FAF8F5] placeholder:text-white/30 focus:outline-none focus:border-[#02b6a4]"
                   />
                 </div>
 
@@ -1840,7 +1961,7 @@ export default function App() {
                     rows={2}
                     value={formState.goal}
                     onChange={(e) => setFormState({ ...formState, goal: e.target.value })}
-                    className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 font-sans text-sm text-[#FAF8F5] focus:outline-none focus:border-[#C9A84C]"
+                    className="w-full rounded-2xl bg-white/5 border border-white/15 px-4 py-3 font-sans text-sm text-[#FAF8F5] focus:outline-none focus:border-[#02b6a4]"
                   />
                 </div>
 
@@ -1852,8 +1973,8 @@ export default function App() {
                 </div>
               </form>
             ) : (
-              <div className="rounded-[2rem] bg-white/5 border border-[#C9A84C]/40 p-6 text-center space-y-4">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#C9A84C] text-[#0D0D12]">
+              <div className="rounded-[2rem] bg-white/5 border border-[#02b6a4]/40 p-6 text-center space-y-4">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#02b6a4] text-[#1E1E1E]">
                   <Check className="w-6 h-6" />
                 </div>
                 <h4 className="font-sans font-bold text-xl text-[#FAF8F5]">
@@ -1861,7 +1982,7 @@ export default function App() {
                 </h4>
                 <p className="font-sans text-sm text-[#FAF8F5]/75">
                   Recebemos os parâmetros de <strong>{formState.brand || 'sua marca'}</strong> para o escopo{' '}
-                  <span className="text-[#C9A84C] font-mono">{selectedPlan}</span>.
+                  <span className="text-[#02b6a4] font-mono">{selectedPlan}</span>.
                 </p>
                 <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center">
                   <a
@@ -1870,7 +1991,7 @@ export default function App() {
                     )}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn-magnetic inline-flex items-center justify-center gap-2 rounded-full bg-[#C9A84C] text-[#0D0D12] font-sans font-semibold text-xs px-6 py-3.5"
+                    className="btn-magnetic inline-flex items-center justify-center gap-2 rounded-full bg-[#02b6a4] text-[#1E1E1E] font-sans font-semibold text-xs px-6 py-3.5"
                   >
                     <span>Enviar Briefing via WhatsApp</span>
                     <ArrowUpRight className="w-4 h-4" />
